@@ -7,11 +7,11 @@ Tivas are frequently used in these microprocessor courses. In this workshop, stu
 
 ![TIVA_C_Flyer_Updated](https://user-images.githubusercontent.com/25860232/196058159-d1554bae-1de0-4c1e-9ae9-6e814383a73f.png)
 
-Session 1: What is Tiva C? Working with a Tiva C (09/29/22)
+Session 1: Working with a TIVA-C (09/29/22)
 - Introduction and Background
 - Ports and Input
     - Provide pin layout and APIs
-    - This Goes with Overall Tiva Module Discussion from Datasheet
+    - This Goes with Overall TIVA Module Discussion from Datasheet
 - General Purpose Input Output (GPIO)
 - Universal Asynchronous Receivers/Transmitters (UARTs)
 - Analog To Digital Converter (ADC)
@@ -36,6 +36,6 @@ Session 3: Working with a Distance Sensor (11/02/22)
     - Example: Red → Too Close … Green → Good Distance 
 
 Session 4: Connecting and Powering Wheels (11/17/22)
-- Working with the PWM Module of Tiva C
+- Working with the PWM Module of TIVA-C
 - Control the “speed” with the readings from the Distance Sensor
     - For example: Stop if too close to object & Blink Red (5 sec)
