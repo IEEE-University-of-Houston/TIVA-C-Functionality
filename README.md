@@ -23,11 +23,10 @@ Session 1: Working with a TIVA-C (09/29/22)
 
 Session 2: Basic LED Blink & Color Change (10/19/22)
 - Sample Code (with removed main functions)
-- Overview of IDE
-    - Code Composer Studio (“professional” tool)
-    - Kiel (“professional” tool)
-    - IAR Systems (“professional” tool)
-    - Energia (“non-professional” tool)
+- Pulse Width Modulation (PWM)
+- Overview of IDE: Code Composer Studio
+- Recording: https://youtu.be/jfk77ekzTeY
+
 
 Session 3: Working with a Distance Sensor (11/02/22)
 - Intro To PID
