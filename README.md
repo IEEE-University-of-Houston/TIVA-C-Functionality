@@ -28,7 +28,7 @@ Session 2: Basic LED Blink & Color Change (10/19/22)
 - Recording: https://youtu.be/jfk77ekzTeY
 
 
-Session 3: Working with a Distance Sensor (11/02/22)
+Session 3: Working with a Distance Sensor (10/31/22)
 - Intro To PID
 - Use ADC module to convert read-in inputs to accurate distance value.
 - Outputting Appropriate LED Signals Depending on the Distance
