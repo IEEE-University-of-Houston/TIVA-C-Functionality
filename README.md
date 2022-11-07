@@ -27,12 +27,12 @@ Session 2: Basic LED Blink & Color Change (10/19/22)
 - Overview of IDE: Code Composer Studio
 - Recording: https://youtu.be/jfk77ekzTeY
 
+![TIVA-C_Session_3_Flyer](https://user-images.githubusercontent.com/25860232/199552295-d45482b1-5c3d-49b3-9f2c-921e6856799e.png)
 
-Session 3: Working with a Distance Sensor (10/31/22)
-- Intro To PID
-- Use ADC module to convert read-in inputs to accurate distance value.
-- Outputting Appropriate LED Signals Depending on the Distance
-    - Example: Red → Too Close … Green → Good Distance 
+Session 3: Working with a Distance Sensor (11/02/22)
+- Coding with Energia
+- Ultrasonic Sensor Setup
+- Recording: https://youtu.be/ybq_WcDyryQ
 
 Session 4: Connecting and Powering Wheels (11/17/22)
 - Working with the PWM Module of TIVA-C
