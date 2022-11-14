@@ -34,7 +34,9 @@ Session 3: Working with a Distance Sensor (11/02/22)
 - Ultrasonic Sensor Setup
 - Recording: https://youtu.be/ybq_WcDyryQ
 
-Session 4: Connecting and Powering Wheels (11/17/22)
+![TIVA-C_Session_4_Flyer](https://user-images.githubusercontent.com/25860232/201566194-fcf4a39e-2ea0-4714-b856-43356e8fa627.png)
+
+Session 4: Connecting and Powering Wheels (11/16/22)
 - Working with the PWM Module of TIVA-C
 - Control the “speed” with the readings from the Distance Sensor
     - For example: Stop if too close to object & Blink Red (5 sec)
