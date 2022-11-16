@@ -42,35 +42,78 @@ void turnBlueOff();
 void turnGreenOff();
 //
 
-char uartMsg[] = "";
+char uartMsg[] = "Hello World\nPlease Select From The Options Below\n1 - Turn On Red LED\n2 - Turn On Blue LED\n3 - Turn On Green LED\n4 - Turn Off RED LED\n5 - Turn Off Blue LED\n6 - Turn Off Green LED\n";
 int main(void)
 {
+    char uartRXVal;
+    hardwareSetup();
+    UARTprintf("%s", uartMsg);
+    //
+    while(-1){
+       uartRXVal = UARTgetc();
+       //
+       switch(uartRXVal){
+           case '1':
+               turnRedOn();
+               break;
+           case '2':
+               turnBlueOn();
+               break;
+           case '3':
+               turnGreenOn();
+               break;
+           case '4':
+               turnRedOff();
+               break;
+           case '5':
+               turnBlueOff();
+               break;
+           case '6':
+               turnGreenOff();
+               break;
+       }
+    }
 	return 0;
 }
 //
 void hardwareSetup(){
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
 
+    GPIOPinConfigure(GPIO_PA0_U0RX);
+    GPIOPinConfigure(GPIO_PA1_U0TX);
+
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3);
+
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+    GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+
+    UARTClockSourceSet(UART0_BASE, UART_CLOCK_PIOSC);
+    UARTStdioConfig(0, BAUDRATE, CLKFREQ);
 }
 //
 void turnRedOn(){
-
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 2);
+    // 0010 => 2
 }
 //
 void turnBlueOn(){
-
+    // 0100 => 4
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 4);
 }
 //
 void turnGreenOn(){
-
+// 1000 => 8
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 8);
 }
 //
 void turnRedOff(){
-
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
 }
 //
 void turnBlueOff(){
-
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
 }
 void turnGreenOff(){
-
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 }
